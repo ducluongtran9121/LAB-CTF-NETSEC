@@ -12,7 +12,7 @@ https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/
 
 ---
 
-- Chúng ta phát hiện được rằng chương trình có lỗ hỏng SSTI khi truyển chuỗi Base64 `e3snYScudXBwZXJ9fQ==` ( {{'a'.upper}} ) vào Decoder field của chương trình.
+- Chúng ta phát hiện được rằng chương trình có lỗ hỏng SSTI khi truyền chuỗi Base64 `e3snYScudXBwZXJ9fQ==` ( {{'a'.upper}} ) vào Decoder field của chương trình.
 
 ![img](images/test_upper.png)
 
