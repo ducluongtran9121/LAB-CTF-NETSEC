@@ -48,10 +48,10 @@ push 	rbx
 - `rax` sẽ là `0x2` (syscall number)
 
 ```js
-mov		rdi, rsp		
-mov		rsi, 0
+mov	rdi, rsp		
+mov	rsi, 0
 mov 	rdx, 0	
-mov		rax, 2	
+mov	rax, 2	
 syscall
 ```
 Ở bước gọi `sys_read()`, ta set các thanh ghi:
@@ -61,9 +61,9 @@ syscall
 - `rax` sẽ là `0x0` (syscall number)
 
 ```js
-mov		rdi, rax
-mov		rsi, rsp
-mov		rdx, 0x100
+mov	rdi, rax
+mov	rsi, rsp
+mov	rdx, 0x100
 mov 	rax, 0
 syscall
 ```
@@ -74,9 +74,9 @@ syscall
 - `rax` sẽ là `0x1` (syscall number)
 
 ```js
-mov		rdi, 1
-mov		rsi, rsp
-mov		rdx, rax
+mov	rdi, 1
+mov	rsi, rsp
+mov	rdx, rax
 mov 	rax, 1
 syscall
 ```
