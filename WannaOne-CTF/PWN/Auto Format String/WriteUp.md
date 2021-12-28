@@ -3,6 +3,19 @@
 ### ***Exploitation***
 ---
 
+![checkfile](images/checkfile.png)
+
+![sourcecode](images/sourcecode.png)
+
+![test](images/test.png)
+
+![findoffset](images/findoffset.png)
+
+![address](images/address.png)
+
+[link](https://docs.pwntools.com/en/stable/fmtstr.html#pwnlib.fmtstr.fmtstr_payload)
+
+
 
 ```js
 from pwn import *
