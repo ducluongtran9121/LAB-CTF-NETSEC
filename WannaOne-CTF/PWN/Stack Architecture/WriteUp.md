@@ -29,7 +29,7 @@ Như vậy sau khi gọi hàm `func1()` 2 lần và `func2()` ta sẽ thỏa mã
 
 Vì hàm `func1()` sẽ được gọi sau hàm `main()` nên `ebp(func1) = ebp + 0x4` &rarr; `s1 = I\'m sorry, don\'t leave me, I want you here with me ~~` sẽ nằm tại `ebp(func1) - 0x54 = ebp - 0x50`. Hơn nữa ở đây người ta dùng `strcmp()` để so sánh nên cần thêm một kí tự `\x00` vào chuỗi `s1`.
 
-Tại `ebp+0x4` và `ebp+0x8` sẽ là địa chỉ của `func1()` (gọi 2 lần). Tại `ebp+0xc` (chính là arg cho func1() lần 1) sẽ là `pop; ret` để tránh nó return về arg &rarr; lỗi chương trình. Ở đây ta sẽ dùng `pop ebp; ret`. Tại `ebp + 0x10` (chính là arg cho func1() lần 1) sẽ là `0x20010508`.
+Tại `ebp+0x4` và `ebp+0x8` sẽ là địa chỉ của `func1()` (gọi 2 lần). Tại `ebp+0xc` (chính là arg cho func1() lần 1) sẽ là `pop; ret` để tránh nó return về arg &rarr; lỗi chương trình. Ở đây ta sẽ dùng `pop ebp; ret`. Tại `ebp + 0x10` (chính là arg cho func1() lần 2) sẽ là `0x20010508`.
 
 Tiếp theo ta sẽ phải gọi 2 lần `func2()` vì với hàm `func2() lần 1` nếu lấy `v1` ở `ebp - 0x4` lúc đó sẽ trùng với arg của `func1() lần 2`. Mặt khác giá trị tại `ebp` luôn giữ nguyên sau lệnh `ret` nên sau khi qua `func2() lần 1`, `v1` ở `ebp - 0x4` lúc này sẽ là `ebp gốc` (ebp của hàm `main` ban đầu) &rarr; gán `ebp gốc` bằng `0x08052001`. Việc đơn giản còn lại là chèn địa chỉ của hàm `win` tại vị trí tiếp theo.
 
