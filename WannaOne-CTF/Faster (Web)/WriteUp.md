@@ -24,7 +24,7 @@ First, we test the `ls` command successfully. Remember to add `$@` in the middle
 
 ![cmdflag](images/test.png)
 
-Copy the above serialized object and paste to the `payload` argument on the URL with `GET` method. You can see there are 2 files `index.php`  and `source.php` in the current directory. 
+Copy the above serialized object and paste to the `payload` parameter on the URL with `GET` method. You can see there are 2 files `index.php`  and `source.php` in the current directory. 
 
 ![cmdflag](images/test1.png)
 
@@ -40,7 +40,7 @@ Let's make serialized objects to view the content of these 2 files. Starting wit
 
 ![cmdflag](images/cmdflag.png)
 
-Paste it in the `payload` argument in URL and you can see the desired flagggggg. No need to care the second one.
+Paste it in the `payload` parameter in URL and you can see the desired flagggggg. No need to care the second one.
 
 ![cmdflag](images/flag.png)
 
