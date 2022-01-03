@@ -7,8 +7,6 @@
 
 # **Khởi tạo shell với quyền user thường**
 
----
-
 **Lỗ hổng đã khai thác**: Khai thác tài nguyên chia sẻ trên dịch vụ SMB (port 445) bằng tài khoản guest.
 
 **Giải thích về lỗ hổng**: Dịch vụ smb được thiết lập cho chúng ta có thể truy cập được cái tài nguyên được chia sẻ bằng tài khoản guest. Hacker có thể lợi dụng tài khoản này để tiến hành khai thác các thông tin được chia sẻ.
