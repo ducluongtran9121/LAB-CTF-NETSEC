@@ -6,5 +6,5 @@
 
 ### Machines
 
-- [Machine NT101.M11.ANTN]("Machine NT101.M11.ANTN")
+- [Machine NT101.M11.ANTN]("NT101.M11.ANTN")
 - [HackTheBox](HackTheBox)
