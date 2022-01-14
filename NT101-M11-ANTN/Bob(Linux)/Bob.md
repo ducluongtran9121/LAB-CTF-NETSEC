@@ -83,7 +83,7 @@ Kết quả trả về gồm các thử mục hiện có trên máy nạn nhân.
 
 **Hình ảnh minh chứng:**
 
-Kiểm tra tên user bằng lệnh whoami, thì kết quả cho thấy chúng tôi đã ếxploit đửợc và lếo tháng đặc quyền lên root.
+Kiểm tra tên user bằng lệnh whoami, thì kết quả cho thấy chúng tôi đã exploit được và leo thang đặc quyền lên root.
 
 **Nội dung tập tin Proof.txt:**
 
