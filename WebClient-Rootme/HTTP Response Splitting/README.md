@@ -10,7 +10,7 @@
 
 Website này chỉ có 3 trang sau:
 
-- **Language**: http://challenge01.root-me.org:58002/user/param?lang=`en/fr`
+- **Language**: http://challenge01.root-me.org:58002/user/param?lang= `en/fr`
 - **Home**: http://challenge01.root-me.org:58002/home
 
 ![home](img/home.png)
@@ -23,11 +23,11 @@ Truy cập vào challenge, website yêu cầu chọn ngôn ngữ với phương 
 
 ![payload](img/Code.png)
 
-Từ ý tưởng đó, mình viết được payload trên sẽ gửi cookie của admin đến một url chuyên nhận request do mình tạo ở trên http://requestbin.net/. Và để chèn được payload này vào param `lang=` thì ta cần urlencode đoạn payload này.
+Từ ý tưởng đó, mình viết được payload trên sẽ gửi cookie của admin đến một url chuyên nhận request do mình tạo ở trên `http://requestbin.net/`. Và để chèn được payload này vào param `lang=` thì ta cần urlencode đoạn payload này.
 
 ![encode](img/encode.png)
 
-Đây là đoạn payload sau khi được encode (Nhớ thêm các byte %0D%0A ở đầu để xuống dòng nhằm tách payload khỏi param `lang`)
+Đây là đoạn payload sau khi được encode (Nhớ thêm các byte `%0D%0A` ở đầu để xuống dòng nhằm tách payload khỏi param `lang`)
 
 ![test](img/test.png)
 
