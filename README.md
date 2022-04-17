@@ -2,8 +2,9 @@
 
 ### CTF
 
-- [WannaOne Weekly (26/12/2021)](WannaOne-CTF)
-- [WebClient-Rootme](WebClient-Rootme)
+- [WannaOne-CTF](WannaOne-CTF)
+- [Rootme](Rootme)
+
 ### Machines
 
 - [NT101.M11.ANTN](NT101-M11-ANTN)
