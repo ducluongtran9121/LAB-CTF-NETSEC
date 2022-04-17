@@ -1,12 +1,10 @@
 # **MEMORY.DMP**
 
 ## **Description**
----
 
 Có một command chứa thông báo lạ trong bash history, liệu bạn có thể khôi phục thông báo đó? Bạn phải xây dựng volatility và tìm profile.
 
 ## **WriteUp**
----
 
 Các bước build Linux profile sau được tham khảo trên 2 bài đọc sau:
 - [Forensic :: Just sharing my notes... (redteams.fr)](https://redteams.fr/forensic/#screenshot)
