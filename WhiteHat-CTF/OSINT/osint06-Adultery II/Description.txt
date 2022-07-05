@@ -1,0 +1,15 @@
+A client hired me as a private investigator to track down her husband, Cuming Brian, because she suspected him of having an affair. Check out his social media accounts to see if there's anything interesting
+The information I got after investigating was that his mistress was blind. In addition, he posted on his secondary social media account a secret message to inform his mistress where they would be dating. So I need you to investigate further and help my client answer the following questions:
+1. Date and time he posted on social media (*Format: DDMMYYYY-HH:MM:SS)
+2. The coordinates of the location where they will meet (The coordinates precision is rounded to three decimal places. Format: latitude,longitude)
+3. What is the secret message?
+
+Flag Format: WhiteHat{PostingDate_Coordinates_SecretNotice}
+
+Example:
+1. PostingDate: 19:06:24 30/04/2022
+2. Coordinates: 12.3452,98.7657
+3. SecretNotice: S3cret-n0tic3-l00k-lik3-th1s
+Flag is: WhiteHat{30042022-19:06:24_12.345,98.766_S3cret-n0tic3-l00k-lik3-th1s}
+
+https://ollie-boyd.github.io/Linkedin-post-timestamp-extractor/

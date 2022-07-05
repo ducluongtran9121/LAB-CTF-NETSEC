@@ -1,0 +1,28 @@
+We need your help to investigate a suspected computer, can you answer the following questions?
+
+1. How many times has the user turned on their default browser and when was the last time it was launched from the taskbar?
+*Format: X_DDMMYYYY-HH:MM:SS (X is an integer, no time conversion needed)
+2. What is the ID,hostname connected by remote access tool?
+*Format: 111222444_hostname
+3. What version does the messaging app use?
+
+Flag Format: WhiteHat{NumberOfTimes_LastTime_ID_Hostname_Version}
+
+Example:
+1. 
+- NumberOfTimes: 6-7
+- LastTimeLaunched: 2022-04-12 07:16:03
+2. 
+- ID: 821029924
+      923252946	
+- Hostname: WIN-QK3QHP1567V
+	    WIN-QK3QHP1566V
+3.
+- Version: 22.4.1
+	   21.2.1
+
+Flag is: WhiteHat{20_30042022-06:09:59_821029924_WIN-QK3QHP1567V_20.22.0}
+WhiteHat{7_12042022-07:16:03_923252946_WIN-QK3QHP1566V_22.4.1}
+
+
+Download file: https://drive.google.com/file/d/1VgsksoWPSz6OA2dMvLn9q07SD5FugDzi/view?usp=sharing

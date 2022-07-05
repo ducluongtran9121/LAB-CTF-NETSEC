@@ -4,6 +4,7 @@
 
 - [WannaOne-CTF](WannaOne-CTF)
 - [Rootme](Rootme)
+- [CTF WhiteHat Play ! 11 - Summer race](WhiteHat-CTF)
 
 ### Machines
 

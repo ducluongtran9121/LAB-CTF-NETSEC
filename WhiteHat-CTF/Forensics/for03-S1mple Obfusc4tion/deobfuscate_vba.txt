@@ -1,0 +1,13 @@
+Private Function F1()
+    
+    Dim flag, str As String
+    flag = "67 97 102 101 32 115 117 97 44 32 84 114 97 32 100 97 32 118 97 32 66 117 110 32 99 104 97"
+    Dim arr() As String
+    arr = Split(flag," ")
+    str = ""
+    For i = LBound(arr) To UBound(arr)
+    str = str & Chr(arr(i))
+    Next
+    MsgBox str & Chr(33) & Chr(32) & Chr(95) & Chr(76) & Chr(111) & Chr(119) & Chr(71) & Chr(95)
+End Function
+

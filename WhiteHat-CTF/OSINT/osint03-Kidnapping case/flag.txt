@@ -1,0 +1,3 @@
+ciphertext = FpfzjWdw{Rwhwvsxxvm_fy_fazdxu_orv_cihc_wc_cmpw_phicd_sf}
+key = JixgfPddzcVKRbEp
+flag = WhiteHat{Summertime_is_always_the_best_of_what_might_be}

